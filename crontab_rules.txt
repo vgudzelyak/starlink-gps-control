@@ -1,0 +1,7 @@
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+#starlink-gps-control script
+*/10 * * * * cd /home/skill_man92/starlink-gps-control; ./ps_checker.sh
+0 0 * * * cd /home/skill_man92/starlink-gps-control; rm starlink-gps-control.log; touch starlink-gps-control.log
+@reboot cd /home/skill_man92/starlink-gps-control; ./ps_checker.sh
